@@ -6,9 +6,9 @@ import os
 from torch.utils.data import Dataset
 
 class MyDataset(Dataset):
-    def __init__(self, dataset_path):
+    def __init__(self, dataset_path, img_dir):
         self.data_path = []
-        self.img_dir = '/root/dreamNav/pairUAV/tours'
+        self.img_dir = img_dir
 
         for tour_id in os.listdir(dataset_path):
             tour_dir = dataset_path + '/' + tour_id + '/'
