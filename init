@@ -1,0 +1,4 @@
+
+huggingface-cli download --resume-download lllyasviel/ControlNet --local-dir ./models/ControlNet
+pip install transformers==4.19.2
+huggingface-cli download --resume-download openai/clip-vit-large-patch14 --local-dir ./models/clip-vit-large-patch14
