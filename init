@@ -8,6 +8,11 @@ pip install -r requirements.txt
 pip install -U gdown 
 gdown --fuzzy 'https://drive.google.com/file/d/1yOyFBAAvLiqfxK8tUKm3togeN3Bu2KAO/view'
 
-huggingface-cli download --resume-download lllyasviel/ControlNet --local-dir ./models/ControlNet
 pip install transformers==4.19.2
+
+huggingface-cli download --resume-download lllyasviel/ControlNet models/control_sd15_normal.pth --local-dir ./models
+mv ./models/models/control_sd15_normal.pth ./models/control_sd15_normal.pth
+rm -rf ./models/.cache
+rm -rf ./models/models
+
 huggingface-cli download --resume-download openai/clip-vit-large-patch14 --local-dir ./models/clip-vit-large-patch14
